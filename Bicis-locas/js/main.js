@@ -1,17 +1,16 @@
 function validateForm() 
 {
-var nombre = document.getElementById("name").value;
-var apellido = document.getElementById("lastname").value;
-var emilio = document.getElementById("input-email").value;
-var contra = document.getElementById("input-password").value;
-var seleccion = document.getElementsByTagName("select")[0].selectedIndex;
-var regexEmilio = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-var regexNombreApellido = /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/;
-var mensaje = "";
-var err = true;
+	var nombre = document.getElementById("name").value;
+	var apellido = document.getElementById("lastname").value;
+	var emilio = document.getElementById("input-email").value;
+	var contra = document.getElementById("input-password").value;
+	var seleccion = document.getElementsByTagName("select")[0].selectedIndex;
+	var regexEmilio = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var regexNombreApellido = /^[ÑA-Za-z _]*[ÑA-Za-z][ñA-Za-z _]*$/;
+	var mensaje = "";
+	var err = true;
 
-	if (nombre == null || nombre == "" || !regexNombreApellido.test(nombre)) 
-	{
+	if (nombre == null || nombre == "" || !regexNombreApellido.test(nombre)) {
 		mensaje += "Ingresa nombre, debe contener solo letras, primera letra mayúscula; \n";
 		err = false;
 	}
@@ -34,8 +33,7 @@ var err = true;
 		mensaje += "Elige tu Bici Loca; \n";
 		err = false;	
 	}
-	if (!err) 
-	{
+	if (!err) {
 		alert (mensaje);
 	}
 	return err; 
